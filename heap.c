@@ -66,12 +66,14 @@ void heap_pop(Heap* pq){
   int i = 0;
   int i_MayorValor = i;
   int izquierda = 2 * i + 1;
-  //int derecha = 2 * i + 2;
+  int derecha = 2 * i + 2;
 
   if (izquierda < pq->size && (pq->heapArray[izquierda].priority > pq->heapArray[i_MayorValor].priority)) {
-        i_MayorValor = izquierda;
-    }
-
+    i_MayorValor = izquierda;
+  }
+  if (derecha < pq->size && (pq->heapArray[derecha].priority > pq->heapArray[i_MayorValor].priority)) {
+    i_MayorValor = derecha;
+  }
 
 }
 
