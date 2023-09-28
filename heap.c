@@ -33,8 +33,8 @@ void heap_push(Heap* pq, void* data, int priority){
   nuevoElem.priority = priority;
 
   // Verificar si el arreglo esta lleno. Si lo esta, se aumenta la capacidad al doble + 1.
-  if(pq->size == pq->capac) {
-    pq = realloc(pq, pq->capac*2 + 1);
+  if(pq->capac == 3) {
+    pq = realloc(pq, pq->capac * 2 + 1);
   }
   
   // Insercion en el siguiente nodo
