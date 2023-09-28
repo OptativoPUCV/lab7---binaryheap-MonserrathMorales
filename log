@@ -165,3 +165,9 @@ heap.c:46:12: error: unused variable ‘padre’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 cb7e686
+Thu 28 Sep 2023 01:16:54 AM UTC: 
+ heap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ tests:  5|2
+total_score: 35/70
+83ffea2
