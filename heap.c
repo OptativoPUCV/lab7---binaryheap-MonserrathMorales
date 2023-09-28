@@ -29,8 +29,12 @@ void* heap_top(Heap* pq){
     > `arreglo = realloc(arreglo, nueva_capacidad)`*/
 void heap_push(Heap* pq, void* data, int priority){
   heapElem nuevoElem;
-  nuevoElem->data = data;
-  nuevoElem->priority = priority;
+  nuevoElem.data = data;
+  nuevoElem.priority = priority;
+
+  if(pq->capac == 3) {
+    pq = realloc(pq, pq->capac * 2 + 1);
+  }
   
 }
 

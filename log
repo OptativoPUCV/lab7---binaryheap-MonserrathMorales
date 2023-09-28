@@ -111,3 +111,14 @@ heap.c:33:12: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka
       |            ^~
 Compilation failed
 66c66dd
+Thu 28 Sep 2023 12:50:10 AM UTC: 
+ heap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:31:12: error: variable ‘nuevoElem’ set but not used [-Werror=unused-but-set-variable]
+   31 |   heapElem nuevoElem;
+      |            ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+07f4282
