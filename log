@@ -274,3 +274,20 @@ heap.c:58:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 1da9a74
+Thu 28 Sep 2023 02:14:58 AM UTC: 
+ heap.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:71:56: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   71 |   if (izquierda < pq->size && (pq->heapArray[izquierda]->priority > pq->heapArray[i_MayorValor]->priority)) {
+      |                                                        ^~
+heap.c:71:96: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   71 |   if (izquierda < pq->size && (pq->heapArray[izquierda]->priority > pq->heapArray[i_MayorValor]->priority)) {
+      |                                                                                                ^~
+heap.c:69:7: error: unused variable ‘derecha’ [-Werror=unused-variable]
+   69 |   int derecha = 2 * i + 2;
+      |       ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+616e8a1
