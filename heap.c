@@ -38,15 +38,18 @@ void heap_push(Heap* pq, void* data, int priority){
   }
   
   // insercion en el siguiente nodo
-  pq->heapArray[pq->size] = nuevoElem;
+  int i = pq->size;
+  pq->heapArray[i] = nuevoElem;
   pq->size++;
 
   //  INTERCAMBIO
   heapElem padre;
+  while(i != 0 && pq->heapArray[(i-1)/2]->priority < pq->heapArray[i]->priority) {
+    
+  }
 
 
-
-  
+  /*
   while(pq->size != 0) {
     padre = pq->heapArray[(pq->size--)/2];
     if(padre->priority > pq->heapArray[pq->size]->priority) return;
@@ -56,6 +59,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
     pq->size = (pq->size--)/2;
   }
+  */
   
 }
 

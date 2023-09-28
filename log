@@ -148,3 +148,20 @@ heap.c:57:14: error: operation on ‘pq->size’ may be undefined [-Werror=seque
 cc1: all warnings being treated as errors
 Compilation failed
 a890ec5
+Thu 28 Sep 2023 01:14:13 AM UTC: 
+ heap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:47:41: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   47 |   while(i != 0 && pq->heapArray[(i-1)/2]->priority < pq->heapArray[i]->priority) {
+      |                                         ^~
+heap.c:47:70: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   47 |   while(i != 0 && pq->heapArray[(i-1)/2]->priority < pq->heapArray[i]->priority) {
+      |                                                                      ^~
+heap.c:46:12: error: unused variable ‘padre’ [-Werror=unused-variable]
+   46 |   heapElem padre;
+      |            ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cb7e686
