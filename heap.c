@@ -27,6 +27,7 @@ void* heap_top(Heap* pq){
     > Si el arreglo está lleno aumente la capacidad al **doble + 1** usando la función `realloc` así:
     > `arreglo = realloc(arreglo, nueva_capacidad)`*/
 void heap_push(Heap* pq, void* data, int priority){
+  if(pq == NULL) return;
   // Inicializar datos para el nuevo elemento
   heapElem nuevoElem;
   nuevoElem.data = data;
@@ -51,25 +52,18 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->heapArray[(i-1)/2] = temp;
     i = (i-1)/2;
   }
-
-
-  /*
-  while(pq->size != 0) {
-    padre = pq->heapArray[(pq->size--)/2];
-    if(padre->priority > pq->heapArray[pq->size]->priority) return;
-
-    pq->heapArray[(pq->size--)/2] = pq->heapArray[pq->size];
-    pq->heapArray[pq->size] = padre;
-
-    pq->size = (pq->size--)/2;
-  }
-  */
-  
 }
 
-
+/* Implemente la función `void heap_pop(Heap* pq)`. Esta función elimina el mayor elemento del montículo (la raíz). */
 void heap_pop(Heap* pq){
+  if(pq == NULL || pq->size == 0) return;
 
+  void raiz = pq->heapArray[0].data;
+  pq->heapArray[0] = pq->heapArray[pq->size - 1];
+  pq->size--;
+  
+
+  return raiz;
 }
 
 /* 1. Implemente la función `Heap* createHeap()`. Esta función crea un nuevo dato de tipo Heap inicializando sus variables. Considere que la capacidad incial es de 3 casillas para el arreglo.

@@ -254,3 +254,23 @@ Thu 28 Sep 2023 01:32:46 AM UTC:
  tests:  7|1
 total_score: 45/70
 2a6ebc6
+Thu 28 Sep 2023 02:03:57 AM UTC: 
+ heap.c | 22 ++++++++--------------
+ 1 file changed, 8 insertions(+), 14 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:61:8: error: variable or field ‘raiz’ declared void
+   61 |   void raiz = pq->heapArray[0].data;
+      |        ^~~~
+heap.c:61:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   61 |   void raiz = pq->heapArray[0].data;
+      |               ^~
+heap.c:66:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   66 |   return raiz;
+      |          ^~~~
+heap.c:58:6: note: declared here
+   58 | void heap_pop(Heap* pq){
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1da9a74
