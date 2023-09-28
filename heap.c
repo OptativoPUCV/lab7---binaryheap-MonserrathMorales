@@ -35,7 +35,7 @@ void heap_push(Heap* pq, void* data, int priority){
   // Verificar si el arreglo esta lleno. Si lo esta, se aumenta la capacidad al doble + 1.
   if(pq->size == pq->capac) {
     pq->capac = pq->capac * 2 + 1;
-    pq = realloc(pq->heapArray, pq->capac * sizeof(heapElem));
+    pq->heapArray = realloc(pq->heapArray, pq->capac * sizeof(heapElem));
     if(pq->heapArray == NULL) exit(EXIT_FAILURE);
   }
   
