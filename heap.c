@@ -24,9 +24,14 @@ void* heap_top(Heap* pq){
 }
 
 
-
+/* Implemente la función `void heap_push(Heap* pq, void* data, int p)`. Esta función inserta un nuevo dato con prioridad `p` en el montículo. 
+    > Si el arreglo está lleno aumente la capacidad al **doble + 1** usando la función `realloc` así:
+    > `arreglo = realloc(arreglo, nueva_capacidad)`*/
 void heap_push(Heap* pq, void* data, int priority){
-
+  heapElem nuevoElem;
+  nuevoElem->data = data;
+  nuevoElem->priority = priority;
+  
 }
 
 
@@ -37,10 +42,10 @@ void heap_pop(Heap* pq){
 /* 1. Implemente la función `Heap* createHeap()`. Esta función crea un nuevo dato de tipo Heap inicializando sus variables. Considere que la capacidad incial es de 3 casillas para el arreglo.
    > Recuerde reservar memoria para el Heap y también para el arreglo `heapArray`. */
 Heap* createHeap(){
-  Heap * newHeap = (Heap *) malloc(sizeof(Heap));
-  newHeap->capac = 3;
-  newHeap->size = 0;
-  newHeap->heapArray = (heapElem *) malloc(sizeof(heapElem) * newHeap->capac);
+  Heap * nuevoHeap = (Heap *) malloc(sizeof(Heap));
+  nuevoHeap->capac = 3;
+  nuevoHeap->size = 0;
+  nuevoHeap->heapArray = (heapElem *) malloc(sizeof(heapElem) * nuevoHeap->capac);
     
-  return newHeap;
+  return nuevoHeap;
 }

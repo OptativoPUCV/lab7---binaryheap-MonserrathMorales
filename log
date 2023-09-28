@@ -98,3 +98,16 @@ Thu 28 Sep 2023 12:42:01 AM UTC:
  tests:  2|2
 total_score: 20/70
 3c4e810
+Thu 28 Sep 2023 12:46:39 AM UTC: 
+ heap.c | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:32:12: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   32 |   nuevoElem->data = data;
+      |            ^~
+heap.c:33:12: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   33 |   nuevoElem->priority = priority;
+      |            ^~
+Compilation failed
+66c66dd
