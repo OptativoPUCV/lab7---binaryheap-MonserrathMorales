@@ -1,0 +1,20 @@
+Thu 28 Sep 2023 12:18:53 AM UTC: 
+ heap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:39:18: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   39 |   newHeap->capac = NULL;
+      |                  ^
+heap.c:40:17: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   40 |   newHeap->size = NULL;
+      |                 ^
+heap.c:41:24: error: implicit declaration of function ‘createList’ [-Werror=implicit-function-declaration]
+   41 |   newHeap->heapArray = createList();
+      |                        ^~~~~~~~~~
+heap.c:41:22: error: assignment to ‘heapElem *’ {aka ‘struct nodo *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   41 |   newHeap->heapArray = createList();
+      |                      ^
+cc1: all warnings being treated as errors
+Compilation failed
+18307a9
