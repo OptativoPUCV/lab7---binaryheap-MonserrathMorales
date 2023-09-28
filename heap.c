@@ -68,22 +68,22 @@ void heap_pop(Heap* pq){
   int izquierda, derecha;
   
   while(1) {
-    if(i == padre) break;
-    
     izquierda = 2 * i + 1;
     derecha = 2 * i + 2;
     
-    if((pq->heapArray[izquierda].priority > pq->heapArray[i].priority)) {
+    if(izquierda < pq->size && (pq->heapArray[izquierda].priority > pq->heapArray[i].priority)) {
       padre = izquierda;
     } else {
       padre = i;
     }
     
-    if((pq->heapArray[derecha].priority > pq->heapArray[i].priority)) {
+    if(derecha < pq->size && (pq->heapArray[derecha].priority > pq->heapArray[i].priority)) {
       padre = derecha;
     } else {
       padre = i;
     }
+
+    if(i == padre) break;
 
     heapElem nuevoValor = pq->heapArray[i];
     pq->heapArray[i] = pq->heapArray[padre];
