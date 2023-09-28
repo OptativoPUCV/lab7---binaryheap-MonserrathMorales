@@ -33,16 +33,16 @@ void heap_push(Heap* pq, void* data, int priority){
   nuevoElem.priority = priority;
 
   // Verificar si el arreglo esta lleno. Si lo esta, se aumenta la capacidad al doble + 1.
-  if(pq->capac == 3) {
-    pq = realloc(pq, pq->capac * 2 + 1);
+  if(pq->size == pq->capac) {
+    pq = realloc(pq, pq->capac*2 + 1);
   }
   
-  // insercion en el siguiente nodo
+  // Insercion en el siguiente nodo
   int i = pq->size;
   pq->heapArray[i] = nuevoElem;
   pq->size++;
 
-  //  INTERCAMBIO
+  // Intercambio de valores
   while(i != 0 && pq->heapArray[(i-1)/2].priority < pq->heapArray[i].priority) {
     heapElem temp = pq->heapArray[i];
     pq->heapArray[i] = pq->heapArray[(i-1)/2];
