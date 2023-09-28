@@ -128,3 +128,23 @@ Thu 28 Sep 2023 12:52:43 AM UTC:
  tests:  3|2
 total_score: 25/70
 31f5cc8
+Thu 28 Sep 2023 01:09:12 AM UTC: 
+ heap.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:52:13: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   52 |     if(padre->priority > pq->heapArray[pq->size]->priority) return;
+      |             ^~
+heap.c:52:49: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   52 |     if(padre->priority > pq->heapArray[pq->size]->priority) return;
+      |                                                 ^~
+heap.c:54:28: error: operation on ‘pq->size’ may be undefined [-Werror=sequence-point]
+   54 |     pq->heapArray[(pq->size--)/2] = pq->heapArray[pq->size];
+      |                   ~~~~~~~~~^~~
+heap.c:57:14: error: operation on ‘pq->size’ may be undefined [-Werror=sequence-point]
+   57 |     pq->size = (pq->size--)/2;
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a890ec5
