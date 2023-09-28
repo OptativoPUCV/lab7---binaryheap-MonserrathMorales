@@ -291,3 +291,14 @@ heap.c:69:7: error: unused variable ‘derecha’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 616e8a1
+Thu 28 Sep 2023 02:15:10 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:69:7: error: unused variable ‘derecha’ [-Werror=unused-variable]
+   69 |   int derecha = 2 * i + 2;
+      |       ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d9a18a6

@@ -68,7 +68,7 @@ void heap_pop(Heap* pq){
   int izquierda = 2 * i + 1;
   int derecha = 2 * i + 2;
 
-  if (izquierda < pq->size && (pq->heapArray[izquierda]->priority > pq->heapArray[i_MayorValor]->priority)) {
+  if (izquierda < pq->size && (pq->heapArray[izquierda].priority > pq->heapArray[i_MayorValor].priority)) {
         i_MayorValor = izquierda;
     }
 
