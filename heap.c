@@ -36,9 +36,9 @@ void heap_pop(Heap* pq){
    > Recuerde reservar memoria para el Heap y también para el arreglo `heapArray`. */
 Heap* createHeap(){
   Heap * newHeap = (Heap *) malloc(sizeof(Heap));
-  newHeap->capac = NULL;
-  newHeap->size = NULL;
-  newHeap->heapArray = createList();
-  
-  return NULL;
+  newHeap->capac = 3;
+  newHeap->size = 0;
+  newHeap->heapArray = (heapElem *) malloc(sizeof(heapElem) * newHeap->heapArray);
+    
+  return newHeap;
 }

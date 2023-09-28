@@ -18,3 +18,15 @@ heap.c:41:22: error: assignment to ‘heapElem *’ {aka ‘struct nodo *’} fr
 cc1: all warnings being treated as errors
 Compilation failed
 18307a9
+Thu 28 Sep 2023 12:22:47 AM UTC: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:41:61: error: invalid operands to binary * (have ‘long unsigned int’ and ‘heapElem *’ {aka ‘struct nodo *’})
+   41 |   newHeap->heapArray = (heapElem *) malloc(sizeof(heapElem) * newHeap->heapArray);
+      |                                                             ^ ~~~~~~~~~~~~~~~~~~
+      |                                                                      |
+      |                                                                      heapElem * {aka struct nodo *}
+Compilation failed
+9939207
