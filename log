@@ -30,3 +30,8 @@ heap.c:41:61: error: invalid operands to binary * (have ‘long unsigned int’ 
       |                                                                      heapElem * {aka struct nodo *}
 Compilation failed
 9939207
+Thu 28 Sep 2023 12:23:33 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+63374df
