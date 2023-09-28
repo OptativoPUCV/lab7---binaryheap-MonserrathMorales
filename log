@@ -122,3 +122,9 @@ heap.c:31:12: error: variable ‘nuevoElem’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 07f4282
+Thu 28 Sep 2023 12:52:43 AM UTC: 
+ heap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+ tests:  3|2
+total_score: 25/70
+31f5cc8
