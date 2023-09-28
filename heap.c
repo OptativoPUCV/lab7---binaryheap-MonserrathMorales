@@ -20,7 +20,7 @@ typedef struct Heap{
     > Recuerde que este dato se encuentra en la raíz el montículo, es decir, en la primera casilla del arreglo. */
 void* heap_top(Heap* pq){
   if(pq == NULL || pq->size == 0) return NULL;
-  return pq->heapArray[0]->data;
+  return pq->heapArray[0].data;
 }
 
 
